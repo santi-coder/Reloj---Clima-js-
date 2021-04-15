@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../imagenes/pexels-pixabay-459451.jpg) #201d1d;
+    background-size: cover;
+    color: white;
+    font-family:'New Tegomin', serif;
+    font-size: 70px;
+}
+.conteGeneral{
+    /*background-color: rgba(165, 222, 212, 0.5);*/
+    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);*/
+    border-radius: 2px;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.conteFecha{
+    background-color: rgba(49, 50, 54, 0.226);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    border-radius: 2px;
+    width: 80%;
+    height: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteHora{
+    background-color: rgba(49, 50, 54, 0.226);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    border-radius: 2px;
+    width: 80%;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.amPmSeg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+.amPmSeg .amPm{
+    font-size: 30px;
+}
+.amPmSeg .seg{
+    font-size: 25px;
+}
+.conteFecha p {
+    margin-left: 20px;
+}
+
