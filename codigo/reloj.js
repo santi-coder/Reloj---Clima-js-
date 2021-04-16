@@ -61,3 +61,13 @@ actualizarHora()
 
 //ejecuto la funcion cada 1 seg 
 setInterval(actualizarHora, 1000)
+
+//Consumo api del clima
+
+function consultarClima() {
+    
+    let ciudadA = document.getElementById("ciudad")
+    let paisA = document.getElementById("pais")
+    
+    console.log(ciud.value);
+}
