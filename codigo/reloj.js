@@ -22,7 +22,7 @@ function actualizarHora() {
     let mesI = document.getElementById("mes")
     let yearI = document.getElementById("year")
 //convierto a reloj de 12 hs
-    if (hora >= 12) {
+    if (hora > 12) {
         horaI.textContent = hora - 12
     }else {
         horaI.textContent = hora 
@@ -65,9 +65,19 @@ setInterval(actualizarHora, 1000)
 //Consumo api del clima
 
 function consultarClima() {
-    
+    const apiKey = "894297105d9b0d15fcca6ee61300df73"
     let ciudadA = document.getElementById("ciudad")
     let paisA = document.getElementById("pais")
     
-    console.log(ciud.value);
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadA.value},${paisA.value}&appid=${apiKey}`
+    fetch(url)
+    .then(responce => responce.json() )
+    .then(data => {
+        console.log(data);
+    
+    })
+    .catch( error => console.log(error) )
+    
+    
+    //console.log(ciudadA.value);
 }
