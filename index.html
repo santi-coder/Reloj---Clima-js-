@@ -29,28 +29,49 @@
             </div>
         </div>    
     </div> 
-    <div id="contPaisCiudadBtn" class="contPaisCiudadBtn">
-        <div id="contCiudad" class="contCiudad">
-            <label for="ciudad">Ciudad</label>
-            <input type="text" placeholder="ingrese su ciudad" id="ciudad" class="ciudad">
+    <div class="contPeticionApi">    
+        <div id="contPaisCiudadBtn" class="contPaisCiudadBtn">
+            <div id="contCiudad" class="contCiudad">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" placeholder="ingrese su ciudad" id="ciudad" class="ciudad">
+            </div>
+            <div id="contPais" class="contPais">            
+                <label for="pais">Pais</label>
+                <select  class="pais" id="pais"  >
+                    <option disabled="" selected="" >Selecciona un pais</option>
+                    <option value="AR">Argentina</option>
+                    <option value="DE">Alemania</option>
+                    <option value="SA">Arabia Saudita</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BR">Brasil</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="ES">España</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="IT">Italia</option>
+                    <option value="SG">Singapur</option>
+                </select>
+            </div>
+            <div>
+                <button class="boton" onclick="consultarClima()">consultar clima</button>
+            </div>
         </div>
-        <div id="contPais" class="contPais">            
-            <label for="pais">Pais</label>
-            <select  class="pais" id="pais"  >
-                <option disabled="" selected="" >Selecciona un pais</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-                <option value="AR">Argentina</option>
-            </select>
+        <div class="contInfoClima">
+            <!--<div class="infoClima" id="infoClima"> </div> -->
+            <p>El clima en ${}:</p>
+            <p class="textTemp">La temperatura actual es de: ${} °C </p>
+            <div class="contDatos">
+                <div class="contTempMaxMin">
+                    <p>Temperatura maxima: ${} °C </p>
+                    <p>Temperatura minima: ${} °C </p>
+                </div>
+                <div class="contHumVien">
+                    <p>Humedad: ${} % </p>  
+                    <p>Viento: ${} Km/h </p>  
+                </div>
+            </div> 
         </div>
-        <div>
-            <button onclick="consultarClima()">consultar clima</button>
-        </div>
-    </div>
+    </div>    
     <script src="codigo/reloj.js"></script>
 </body>
 </html>

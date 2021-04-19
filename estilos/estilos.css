@@ -60,4 +60,82 @@ body{
 .conteFecha p {
     margin-left: 20px;
 }
+/*estilos llamado a la api */
 
+.contPeticionApi{
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contPaisCiudadBtn{
+    background-color:black;
+    height:300px;
+    width: 30%;
+    font-size:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contCiudad{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.contCiudad input {
+    height: 30px;
+    width: 220px;
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    border: 0px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.contPais{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; 
+}
+.pais {
+    height: 30px;
+    width: 220px;
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    border: 0px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.boton{
+    height: 30px;
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    border: 0px;
+    font-size: 20px;
+    margin-top: 40px;
+    padding-right: 10px;
+    padding-left: 10px; 
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    border: 0px;   
+}
+
+.contInfoClima{
+    background-color: rgba(216, 216, 216, 0.993);
+    height:300px;
+    max-height:300px;
+    width: 70%;
+    font-size: 25px;
+    color: black;
+    padding-top:15px;
+    box-sizing: border-box;
+    
+}
+.contDatos{
+    display: flex;
+    flex-direction: row;
+    background-color: cyan;
+}
+.contTempMaxMin{
+    background-color: blueviolet;
+}
+.contHumVien{
+    background-color: rgb(41, 32, 49);
+}

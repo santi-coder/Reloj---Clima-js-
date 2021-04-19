@@ -68,16 +68,23 @@ function consultarClima() {
     const apiKey = "894297105d9b0d15fcca6ee61300df73"
     let ciudadA = document.getElementById("ciudad")
     let paisA = document.getElementById("pais")
+    let insertarInfo = document.getElementById("infoClima") 
     
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadA.value},${paisA.value}&appid=${apiKey}`
     fetch(url)
     .then(responce => responce.json() )
     .then(data => {
         console.log(data);
+        insertarInfo.innerHTML=`
+        <div>
+            <p> El clima en ${data.name}! </p>
+            
+        
+        
+        
+        </div>
+        `
     
     })
     .catch( error => console.log(error) )
-    
-    
-    //console.log(ciudadA.value);
 }
