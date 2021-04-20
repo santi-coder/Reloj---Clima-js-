@@ -64,13 +64,27 @@ setInterval(actualizarHora, 1000)
 
 //Consumo api del clima
 
-function consultarClima() {
+function validacionDatos() {
+    let ciudadA = document.getElementById("ciudad").value
+    let paisA = document.getElementById("pais").value
+    let insertarInfo = document.getElementById("infoClima")
+
+    if (ciudadA.trim()===""||paisA==="Seleccione su pais") {
+        //console.log("debe completar los dos campos");
+        insertarInfo.innerHTML=`
+            <p class="alert">Debe completar los dos campos</p>
+        ` 
+    }else{
+        consultarClima(ciudadA, paisA)
+    }
+}
+
+
+function consultarClima(ciudadA, paisA) {
     const apiKey = "894297105d9b0d15fcca6ee61300df73"
-    let ciudadA = document.getElementById("ciudad")
-    let paisA = document.getElementById("pais")
     let insertarInfo = document.getElementById("infoClima") 
     
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadA.value},${paisA.value}&appid=${apiKey}`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadA},${paisA}&appid=${apiKey}`
     fetch(url)
     .then(responce => responce.json() )
     .then(data => {

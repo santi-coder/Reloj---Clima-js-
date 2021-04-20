@@ -129,9 +129,10 @@ body{
     padding-top:15px;
     box-sizing: border-box;
     padding-left: 45px;
+    padding-right: 45px;
 }
 .textCiudad {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
 }
 .textTemp {
@@ -152,9 +153,20 @@ body{
     color: white;    
 }
 .linea{
-    border-left: 5px solid rgb(255, 255, 255) ;
+    border-left: 5px solid rgb(0, 0, 0) ;
     margin-bottom: 18px;
 }
 .contTempMaxMinHumVient p {
     margin-bottom: 6px;
+}
+.alert{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    width: 40%;
+    height: 50px; 
+    text-align: center;
+    line-height: 50px; 
+    margin-top: 100px;
 }
