@@ -77,11 +77,19 @@ function consultarClima() {
         console.log(data);
         insertarInfo.innerHTML=`
         <div>
-            <p> El clima en ${data.name}! </p>
-            
-        
-        
-        
+            <p class="textCiudad">El clima en ${data.name}:</p>
+            <p class="textTemp">La temperatura actual es de: ${data.name} °C </p>
+            <div class="contDatos">
+                <div class="contTempMaxMinHumVient">
+                    <p>Temperatura maxima: ${data.name} °C </p>
+                    <p>Temperatura minima: ${data.name} °C </p>
+                </div>
+                <div class="linea"></div>
+                <div class="contTempMaxMinHumVient">
+                    <p>Humedad: ${data.name} % </p>  
+                    <p>Viento: ${data.name} Km/h </p>  
+                </div>
+            </div> 
         </div>
         `
     
