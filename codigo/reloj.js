@@ -70,7 +70,6 @@ function validacionDatos() {
     let insertarInfo = document.getElementById("infoClima")
 
     if (ciudadA.trim()===""||paisA==="Seleccione su pais") {
-        //console.log("debe completar los dos campos");
         insertarInfo.innerHTML=`
             <p class="alert">Debe completar los dos campos</p>
         ` 
@@ -83,30 +82,40 @@ function validacionDatos() {
 function consultarClima(ciudadA, paisA) {
     const apiKey = "894297105d9b0d15fcca6ee61300df73"
     let insertarInfo = document.getElementById("infoClima") 
-    
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadA},${paisA}&appid=${apiKey}`
+    const kelvin = 273.15 ;
+    const seg = 3600 ;
+    
     fetch(url)
     .then(responce => responce.json() )
     .then(data => {
-        console.log(data);
+        //console.log(data);
+        
+        if (data.cod==="404") {
+            insertarInfo.innerHTML=`
+            <p class="alert">Ubicacion no encontrada</p>
+        ` 
+        } else {
         insertarInfo.innerHTML=`
         <div>
             <p class="textCiudad">El clima en ${data.name}:</p>
-            <p class="textTemp">La temperatura actual es de: ${data.name} °C </p>
+            <p class="textTemp">La temperatura actual es de: ${Number(data.main.temp-kelvin).toFixed(2)} °C </p>
             <div class="contDatos">
                 <div class="contTempMaxMinHumVient">
-                    <p>Temperatura maxima: ${data.name} °C </p>
-                    <p>Temperatura minima: ${data.name} °C </p>
+                    <p>Temperatura maxima: ${Number(data.main.temp_max-kelvin).toFixed(2)} °C </p>
+                    <p>Temperatura minima: ${Number(data.main.temp_min-kelvin).toFixed(2)} °C </p>
                 </div>
                 <div class="linea"></div>
                 <div class="contTempMaxMinHumVient">
-                    <p>Humedad: ${data.name} % </p>  
-                    <p>Viento: ${data.name} Km/h </p>  
+                    <p>Humedad: ${data.main.humidity} % </p>  
+                    <p>Viento: ${Number(data.wind.speed*seg/1000).toFixed(2)} Km/h </p>  
                 </div>
             </div> 
         </div>
         `
-    
+        }
+       // console.log(data.main.humidity) 
     })
+    
     .catch( error => console.log(error) )
 }

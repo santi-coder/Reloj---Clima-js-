@@ -1,45 +1,43 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
-    background: url(../imagenes/pexels-pixabay-459451.jpg) #201d1d;
+    background: url(../imagenes/fotoTres.jpg) #201d1d;
     background-size: cover;
     color: white;
     font-family:'New Tegomin', serif;
-    font-size: 70px;
+    font-size: 50px;
 }
 .conteGeneral{
-    /*background-color: rgba(165, 222, 212, 0.5);*/
-    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);*/
     border-radius: 2px;
     width: 90%;
-    height: 500px;
+    height: 350px;
     margin: auto;
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding-bottom: 50px;
 }
 .conteFecha{
-    background-color: rgba(49, 50, 54, 0.226);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    background-color: rgba(33, 33, 34, 0.226);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.609);
     border-radius: 2px;
     width: 80%;
-    height: 80%;
+    height: 20%;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .conteHora{
-    background-color: rgba(49, 50, 54, 0.226);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    background-color: rgba(33, 33, 34, 0.226);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.609);
     border-radius: 2px;
     width: 80%;
-    height: 80%;
+    height: 20%;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -69,11 +67,15 @@ body{
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 0px;
     font-family: 'Lato', sans-serif;
+    position: fixed;
+    bottom: 0px;
+
 }
 .contPaisCiudadBtn{
     background-color: rgba(56, 56, 56, 0.911);
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.609);
     height:300px;
     width: 30%;
     font-size:30px;
@@ -121,6 +123,7 @@ body{
 
 .contInfoClima{
     background-color: rgba(65, 65, 65, 0.589);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.609);
     height:300px;
     max-height:300px;
     width: 70%;
@@ -136,7 +139,7 @@ body{
     font-weight: bold;
 }
 .textTemp {
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 10px;
 }
 .contDatos{
@@ -153,11 +156,12 @@ body{
     color: white;    
 }
 .linea{
-    border-left: 5px solid rgb(0, 0, 0) ;
+    border-left: 5px solid rgb(36, 36, 36) ;
     margin-bottom: 18px;
 }
 .contTempMaxMinHumVient p {
     margin-bottom: 6px;
+    font-size: 27px;
 }
 .alert{
     background-color: black;
