@@ -89,7 +89,7 @@ function consultarClima(ciudadA, paisA) {
     fetch(url)
     .then(responce => responce.json() )
     .then(data => {
-        //console.log(data);
+        console.log(data);
         
         if (data.cod==="404") {
             insertarInfo.innerHTML=`
