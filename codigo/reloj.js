@@ -115,6 +115,7 @@ function consultarClima(ciudadA, paisA) {
         `
         }
        // console.log(data.main.humidity) 
+       
     })
     
     .catch( error => console.log(error) )
