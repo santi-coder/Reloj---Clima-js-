@@ -17,7 +17,7 @@ function RainyDay(options, canvas) {
 		crop: [0, 0, this.img.naturalWidth, this.img.naturalHeight], //coordenadas por si solo una parte de la imagen tiene efecto lluvia
 		enableSizeChange: true,
 		parentElement: document.getElementsByTagName('body')[0],
-		fps: 30,
+		fps: 25,
 		fillStyle: '#8ED6FF',
 		enableCollisions: false,
 		gravityThreshold: 3,

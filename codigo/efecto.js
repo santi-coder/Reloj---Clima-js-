@@ -1,9 +1,9 @@
 function quellueva() {
-    var image = document.getElementById('imagen');
+    var image = document.getElementById('fondo');
     image.onload = function () {
         var engine = new RainyDay({
             image: this,
-            blur: 10,
+            blur: 8,
             opacity: 1,
             gravityAngle: Math.PI / 2,
             gravityAngleVariance: 0
@@ -17,6 +17,7 @@ function quellueva() {
                            [3, 8, 1]
                        ], 50);
     };
+    
     image.crossOrigin = 'anonymous';
     image.src = 'imagenes/fotoCuatro.jpg';
 
