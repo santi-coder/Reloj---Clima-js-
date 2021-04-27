@@ -115,7 +115,7 @@ function consultarClima(ciudadA, paisA) {
         `
         }
  
-        if (data.main.humidity>80) {
+        if (data.main.humidity>70) {
             quellueva()
         }
        
